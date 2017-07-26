@@ -2,3 +2,5 @@
 /.idea/
 /node_modules/
 /googleExtensionServer.iml
+/.gitignore
+/package-lock.json
