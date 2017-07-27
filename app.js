@@ -17,11 +17,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 route(app);//маршрутизация
-app.use(express.static(path.join(__dirname, 'ngBundle')));
-app.use(express.static(path.join(__dirname, 'ngBundle/css/')));
-app.use(express.static(path.join(__dirname, 'ngBundle/dist/')));
-app.use(express.static(path.join(__dirname, 'ngBundle/dist/assets')));
-app.use(express.static(path.join(__dirname, 'ngBundle/dist/pages')));
+app.use(express.static(path.join(__dirname, 'dist/')));
+app.use(express.static(path.join(__dirname, 'dist/assets')));
+app.use(express.static(path.join(__dirname, 'dist/pages')));
 
 let server = app.listen(app.get('port'), function () {
 	let port = server.address().port;
