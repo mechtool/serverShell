@@ -12,13 +12,15 @@ app.set('views', [path.join(__dirname, 'dist')]);   //ngBundle/dist
 app.set('port', process.env.PORT || 3000);
 app.set('mongoDbUri', process.env.NODE_ENV == 'production' ?  process.env.MongoDbUrl : 'mongodb://sifon:1q2w3e4r5t@ds023624.mlab.com:23624/appsbase') ;
 
-app.use(favicon(path.join(__dirname, 'favicon.ico')));
+//app.use(favicon(path.join(__dirname, 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 route(app);//маршрутизация
-app.use(express.static(path.join(__dirname, 'dist/')));
+app.use('/src/assets', express.static('dist/assets')) ;
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'dist/assets')));
+app.use(express.static(path.join(__dirname, 'dist/assets/fonts')));
 app.use(express.static(path.join(__dirname, 'dist/pages')));
 
 let server = app.listen(app.get('port'), function () {
