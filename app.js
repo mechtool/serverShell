@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'dist/assets')));
 app.use(express.static(path.join(__dirname, 'dist/assets/fonts')));
 app.use(express.static(path.join(__dirname, 'dist/pages')));
+app.use(express.static('public'));
 
 let server = app.listen(app.get('port'), function () {
 	let port = server.address().port;
