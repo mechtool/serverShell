@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 route(app);//маршрутизация
 app.use('/src/assets', express.static('dist/assets')) ;
+app.use(express.static(path.join(__dirname, 'static')));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'dist/assets')));
 app.use(express.static(path.join(__dirname, 'dist/assets/fonts')));
