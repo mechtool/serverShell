@@ -21,7 +21,7 @@ var map = {
 	],
 	"./componentLibrary/navigation/navigation.module.ngfactory": [
 		"./src/$$_gendir/app/components/componentLibrary/navigation/navigation.module.ngfactory.ts",
-		4,
+		5,
 		0
 	],
 	"./components/components.module.ngfactory": [
@@ -31,7 +31,7 @@ var map = {
 	],
 	"./guides/guides.module.ngfactory": [
 		"./src/$$_gendir/app/guides/guides.module.ngfactory.ts",
-		5,
+		4,
 		0
 	]
 };
